@@ -1,13 +1,11 @@
-//
-//  SCUser.h
-//  Social
-//
-//  Created by JeromeWang on 2018/1/20.
-//  Copyright © 2018年 JeromeWang. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
 @interface SCUser : NSObject
+
+@property (nonatomic, copy) NSString *userName;
+@property (nonatomic, copy) NSString *password;
+@property (nonatomic, copy) NSString *token;
+
+- (instancetype)initWithUsername:(NSString *)username andPassword:(NSString *)password;
 
 @end

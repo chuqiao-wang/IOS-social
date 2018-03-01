@@ -1,13 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SCPostDetailViewController">
             <connections>
+                <outlet property="postImageView" destination="gUs-MT-Ifl" id="m9q-rT-PIV"/>
+                <outlet property="postView" destination="pyV-pS-New" id="en1-ER-dzP"/>
+                <outlet property="usernameLabel" destination="H8l-5t-Yxv" id="ua1-Uo-HEH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,7 +22,43 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8l-5t-Yxv">
+                    <rect key="frame" x="20" y="100" width="200" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="LK8-7s-rNL"/>
+                        <constraint firstAttribute="width" constant="200" id="ttF-Ld-uog"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gUs-MT-Ifl">
+                    <rect key="frame" x="20" y="150" width="335" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="PX2-ml-kIa"/>
+                    </constraints>
+                </imageView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pyV-pS-New">
+                    <rect key="frame" x="20" y="370" width="335" height="217"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="pyV-pS-New" secondAttribute="bottom" constant="80" id="46g-BI-3oz"/>
+                <constraint firstItem="gUs-MT-Ifl" firstAttribute="top" secondItem="H8l-5t-Yxv" secondAttribute="bottom" constant="20" id="DWc-aY-EXy"/>
+                <constraint firstItem="H8l-5t-Yxv" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="FqB-vY-ZwO"/>
+                <constraint firstItem="pyV-pS-New" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="Hja-1T-PYH"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="pyV-pS-New" secondAttribute="trailing" constant="20" id="KSU-9m-4xr"/>
+                <constraint firstItem="pyV-pS-New" firstAttribute="top" secondItem="gUs-MT-Ifl" secondAttribute="bottom" constant="20" id="Nlf-9P-U3Y"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="gUs-MT-Ifl" secondAttribute="trailing" constant="20" id="O96-TU-olO"/>
+                <constraint firstItem="H8l-5t-Yxv" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="80" id="k2L-QW-FxG"/>
+                <constraint firstItem="gUs-MT-Ifl" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="xa6-UZ-DMD"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
         </view>
     </objects>

@@ -1,13 +1,15 @@
-//
-//  SCLocationManager.h
-//  Social
-//
-//  Created by JeromeWang on 2018/1/27.
-//  Copyright © 2018年 JeromeWang. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
+@class CLLocation;
+
+extern NSString * const SCLocationUpdateNotification;
 
 @interface SCLocationManager : NSObject
+
++ (instancetype)sharedManager;
+- (void)getUserPermission;
++ (BOOL)isLocationServicesEnabled;
+- (void)startLoadUserLocation;
+- (void)stopLoadUserLocation;
+- (CLLocation *)getUserCurrentLocation;
 
 @end

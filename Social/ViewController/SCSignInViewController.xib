@@ -1,13 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SCSignInViewController">
             <connections>
+                <outlet property="nameField" destination="Nsy-87-Zzv" id="T18-wT-aBl"/>
+                <outlet property="passwordField" destination="MNO-OM-XzE" id="VtY-jW-R7u"/>
+                <outlet property="signInButton" destination="QYi-8g-mbr" id="YkY-MN-QFc"/>
+                <outlet property="signupButton" destination="PWM-72-1I8" id="URF-F0-G7k"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,8 +23,57 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nsy-87-Zzv">
+                    <rect key="frame" x="62" y="70" width="250" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="BIW-2y-AIC"/>
+                        <constraint firstAttribute="width" constant="250" id="lGE-hU-5IM"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MNO-OM-XzE">
+                    <rect key="frame" x="62" y="130" width="250" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="3jY-Sc-fpr"/>
+                        <constraint firstAttribute="height" constant="40" id="llS-JS-9um"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYi-8g-mbr">
+                    <rect key="frame" x="62" y="195" width="250" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="QU6-yG-Jya"/>
+                        <constraint firstAttribute="width" constant="250" id="TjB-vR-ytW"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWM-72-1I8">
+                    <rect key="frame" x="62" y="250" width="250" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="KRp-Pw-F21"/>
+                        <constraint firstAttribute="height" constant="40" id="OUc-8H-5Iw"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Nsy-87-Zzv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0cD-oJ-iAt"/>
+                <constraint firstItem="QYi-8g-mbr" firstAttribute="top" secondItem="MNO-OM-XzE" secondAttribute="bottom" constant="25" id="2B4-3I-IWw"/>
+                <constraint firstItem="PWM-72-1I8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2ei-7Y-9iU"/>
+                <constraint firstItem="QYi-8g-mbr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fC0-QM-6JP"/>
+                <constraint firstItem="MNO-OM-XzE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fJ8-im-58R"/>
+                <constraint firstItem="PWM-72-1I8" firstAttribute="top" secondItem="QYi-8g-mbr" secondAttribute="bottom" constant="15" id="l1N-UF-lsv"/>
+                <constraint firstItem="Nsy-87-Zzv" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="50" id="oQo-AO-I8p"/>
+                <constraint firstItem="MNO-OM-XzE" firstAttribute="top" secondItem="Nsy-87-Zzv" secondAttribute="bottom" constant="20" id="r7K-hR-PP1"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
 </document>

@@ -1,13 +1,15 @@
-//
-//  SCPost.h
-//  Social
-//
-//  Created by JeromeWang on 2018/1/21.
-//  Copyright © 2018年 JeromeWang. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface SCPost : NSObject
+
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *message;
+@property (nonatomic, strong) NSDate *postDate;
+@property (nonatomic, strong) CLLocation *location;
+@property (nonatomic, copy) NSString *imageURL;
+
+- (instancetype)initWithDictionary:(NSDictionary *)dict;
 
 @end
